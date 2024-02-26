@@ -1,0 +1,6 @@
+{
+    "bracketSameLine": true,
+    "quoteProps": "consistent",
+    "singleAttributePerLine": true,
+    "tabWidth": 2
+}
