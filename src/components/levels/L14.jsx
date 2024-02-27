@@ -25,6 +25,8 @@ const Level14 = ({ onComplete }) => {
 
   const handleCommandSubmit = () => {
     const match = inputValue.match(/^\/(text|help)\s*(.*)$/i);
+    const matchTheme = inputValue.match(/^\/theme (dark|light)$/);
+
 
     if (match) {
       const [, command, text] = match;
@@ -52,7 +54,12 @@ const Level14 = ({ onComplete }) => {
       setTimeout(() => {
         onComplete();
       }, 2000);
-    } else {
+    }
+   else if (matchTheme) {
+    const theme = matchTheme[1];
+    setTheme(theme);
+    setInputValue("");}
+    else {
       // Clear success message and input value
       setSuccessMessage("");
       setInputValue("");
