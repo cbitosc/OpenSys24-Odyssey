@@ -332,10 +332,10 @@ const Level13 = ({ onComplete }) => {
       <h2 className="mb-2 text-xl font-bold">Available Commands:</h2>
       <ul className="divide-y divide-gray-300">
         <li className="py-2">
-          <span className="font-bold text-purple-600">/start</span> <span className="text-blue-500">[left|right]</span> - <em>Start animation.</em>
+          <span className="font-bold text-purple-600">/start</span> <span className="text-blue-500">[1|2|3|4]</span> - <em>Start animation.</em>
         </li>
         <li className="py-2">
-          <span className="font-bold text-purple-600">/stop</span> <span className="text-blue-500">[left|right]</span> - <em>Stop animation.</em>
+          <span className="font-bold text-purple-600">/stop</span> <span className="text-blue-500">[1|2|3|4]</span> - <em>Stop animation.</em>
         </li>
         
         <li className="py-2">
