@@ -326,6 +326,9 @@ const Level13 = ({ onComplete }) => {
           }
         }
       `}</style>
+      <h2 className="mb-2 text-xl font-bold">Hint:</h2>
+            <p className="font-bold text-purple-600">I'm a visionary known for my <span className="font-thin "><span className=" dark:text-white text-[#080917]">i</span>Nventions</span></p>
+            <br />
       <h2 className="mb-2 text-xl font-bold">Available Commands:</h2>
       <ul className="divide-y divide-gray-300">
         <li className="py-2">
