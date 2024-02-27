@@ -1,4 +1,4 @@
-const maxLevel = 13;
+const maxLevel = 14;
 const startTimes = {
   1: 1708925400,
   2: 1708925400,
