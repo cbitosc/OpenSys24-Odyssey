@@ -51,7 +51,7 @@ const Home = () => {
 ) : (
   <div className="mt-8 text-[#F9DC34]">
     {userDet?.CL > 16 ? (
-      <span>Congratulations for completing The Odyssey!</span>
+      <span>Congratulations on completing The Odyssey!</span>
     ) : (
       <span>Come back soon for more levels!</span>
     )}

@@ -267,21 +267,21 @@ const Level12 = ({ onComplete }) => {
               <li className="py-2">
                 <span className="font-bold text-purple-600">/flipdigit</span>{" "}
                 <span className="text-blue-500">[position]</span> -{" "}
-                <em>Flip the digit at the specified position.</em>
+                <em>Flip the digit at the specified position. (max uses: 2)</em>
               </li>
               <li className="py-2">
                 <span className="font-bold text-purple-600">/shiftleft</span>{" "}
                 <span className="text-blue-500">[amount]</span> -{" "}
-                <em>Shift digit to the left by the specified amount.</em>
+                <em>Shift digit to the left by the specified amount. (max uses: 2)</em>
               </li>
               <li className="py-2">
                 <span className="font-bold text-purple-600">/shiftright</span>{" "}
                 <span className="text-blue-500">[amount]</span> -{" "}
-                <em>Shift digit to the right by the specified amount.</em>
+                <em>Shift digit to the right by the specified amount. (max uses: 2)</em>
               </li>
               <li className="py-2">
                 <span className="font-bold text-purple-600">/invert</span> -{" "}
-                <em>Invert the digit.</em>
+                <em>Inverts all digits. (max uses: 2)</em>
               </li>
               <li className="py-2">
                 <span className="font-bold text-purple-600">/theme</span>{" "}
