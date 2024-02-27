@@ -144,7 +144,7 @@ const Level6 = ({ onComplete }) => {
         }
       `}</style>
       <h2 className="mb-2 text-xl font-bold">Hint:</h2>
-            <p className="font-bold text-purple-600">Look closely</p>
+            <p className="font-bold text-purple-600">Look from a further perspective!</p>
             <br />
       <h2 className="mb-2 text-xl font-bold">Available Commands:</h2>
       <ul className="divide-y divide-gray-300">
