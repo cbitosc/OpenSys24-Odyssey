@@ -43,18 +43,20 @@ const Home = () => {
         />
       </div>
       {userDet?.CL <= staticData.maxLevel ? (
-        <Link href="/game">
-          <Button
-            className="mt-8 text-xl"
-            size="lg">
-            Play Level {userDet?.CL}
-          </Button>
-        </Link>
-      ) : (
-        <div className="mt-8 text-[#F9DC34]">
-          <span>Come back soon for more levels!</span>
-        </div>
-      )}
+  <Link href="/game">
+    <Button className="mt-8 text-xl" size="lg">
+      Play Level {userDet?.CL}
+    </Button>
+  </Link>
+) : (
+  <div className="mt-8 text-[#F9DC34]">
+    {userDet?.CL > 16 ? (
+      <span>Congratulations for completing The Odyssey!</span>
+    ) : (
+      <span>Come back soon for more levels!</span>
+    )}
+  </div>
+)}
       <div className="mt-8 text-white">
         <span>
           Number of levels completed{" "}

@@ -69,11 +69,10 @@ const Game = () => {
 
       onValue(userRef, (snapshot) => {
         const userVal = snapshot.val();
-        console.log(userVal);
         setUserDet(userVal);
       });
 
-      setStartTime(session.user.email);
+      
 
       return () => {
         off(userRef);
@@ -93,6 +92,10 @@ const Game = () => {
       redirect("/");
     }
   }, [status, redirect]);
+
+  useEffect(() => {
+    setStartTime(session?.user?.email);
+  }, [userDet, session]);
 
   return (
     <>

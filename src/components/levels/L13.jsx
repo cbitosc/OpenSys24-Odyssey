@@ -34,9 +34,9 @@ const Level13 = ({ onComplete }) => {
     );
     const xRem = x / baseFontSize;
     const yRem = y / baseFontSize;
-    console.log(yRem);
+
     const eyRem = yRem;
-    console.log(eyRem);
+
 
     return (eyRem >= -1.5 && eyRem <= 1.5) || eyRem <= -13.5 || eyRem >= 13.5;
   };

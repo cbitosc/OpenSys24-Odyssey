@@ -67,7 +67,7 @@ const Level16 = ({ onComplete }) => {
   const handleCommandSubmit = () => {
     const matchTheme = inputValue.match(/^\/theme (dark|light)$/);
 
-    const match = inputValue.match(/^\/(invert|help|multiply|add)\s*(.*)$/);
+    const match = inputValue.match(/^\/(invert|help|multiply|divide|add)\s*(.*)$/);
 
     if (match) {
       const [, operation, parameters] = match;
@@ -115,6 +115,45 @@ const Level16 = ({ onComplete }) => {
             setInputValue("");
           }
           break;
+          case "divide":
+            const divideMatch = parameters.match(/^(row|col)([1-3])\s+(\S+)$/);
+            if (divideMatch) {
+              const [, type, number, factor] = divideMatch;
+              const updatedMatrix = [
+                digit1,
+                digit2,
+                digit3,
+                digit4,
+                digit5,
+                digit6,
+                digit7,
+                digit8,
+                digit9,
+              ];
+              if (type === "row") {
+                const startIndex = (number - 1) * 3;
+                const endIndex = startIndex + 3;
+                for (let i = startIndex; i < endIndex; i++) {
+                  updatedMatrix[i] /= parseFloat(factor);
+                }
+              } else if (type === "col") {
+                const colNumber = parseInt(number);
+                for (let i = colNumber - 1; i < 9; i += 3) {
+                  updatedMatrix[i] /= parseFloat(factor);
+                }
+              }
+              setDigit1(updatedMatrix[0]);
+              setDigit2(updatedMatrix[1]);
+              setDigit3(updatedMatrix[2]);
+              setDigit4(updatedMatrix[3]);
+              setDigit5(updatedMatrix[4]);
+              setDigit6(updatedMatrix[5]);
+              setDigit7(updatedMatrix[6]);
+              setDigit8(updatedMatrix[7]);
+              setDigit9(updatedMatrix[8]);
+              setInputValue("");
+            }
+            break;
         case "add":
           const addMatch = parameters.match(
             // /^(row|col)\s+(\d+)\*(\d+)\s+(\d+)\*(\d+)$/
@@ -291,6 +330,9 @@ const Level16 = ({ onComplete }) => {
       <ul className="divide-y divide-gray-300">
       <li className="py-2">
           <span className="font-bold text-purple-600">/multiply</span> <span className="text-blue-500">[row|col][1-3] [number]</span> - <em>Multiply a specified row or column by a number.</em>
+        </li>
+        <li className="py-2">
+          <span className="font-bold text-purple-600">/divide</span> <span className="text-blue-500">[row|col][1-3] [number]</span> - <em>Divide a specified row or column by a number.</em>
         </li>
         <li className="py-2">
           <span className="font-bold text-purple-600">/add</span> <span className="text-blue-500">[row|col] [multiplication factor]*[row/col number] to [multiplication factor]*[row/col number]</span> - <em>Adds the specified multiplication factor of one row or column to another row or column.</em><span className="font-bold text-purple-600"><br/>Example:</span> <code>/add row 2*1 to 3*2</code> (adds 2 times of row 1 to 3 times of row 2).

@@ -8,7 +8,7 @@ export function cn(...inputs) {
 
 export function timeFromStart(seconds) {
   // Define points and corresponding times in ascending order
-  const points = [500, 450, 400, 300, 250, 200, 100, 100];
+  const points = [400, 350, 320, 300, 250, 200, 100, 100];
   const times = [0, 100, 300, 600, 900, 1200, 1800, Infinity];
 
   // Find the segment containing the input time

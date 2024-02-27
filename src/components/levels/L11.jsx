@@ -42,6 +42,7 @@ const Level11 = ({ onComplete }) => {
       const angle = Math.round(
         Math.atan2(transformValues[1], transformValues[0]) * (180 / Math.PI)
       );
+      console.log(angle)
       return angle >= angleRange[0] && angle <= angleRange[1];
     }
     return false;
@@ -198,9 +199,9 @@ const Level11 = ({ onComplete }) => {
             height={100}
             style={{ transform: `rotate(${rotationAngle}deg)` }}
           />
-          <span>*1.5 = </span>
+          <span>/2 = </span>
           <span>{atext}</span>
-          <span> = /2</span>
+          <span> = 1.5*</span>
           <Image
             ref={rightRef}
             className={`rounded-full bg-none ${
